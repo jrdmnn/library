@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const Book = require('./models/Book');
 
-mongoose.connect('mongodb://localhost/library', {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/library', {
 	useNewUrlParser: true,
 	useUnifiedTopology: true
 });
